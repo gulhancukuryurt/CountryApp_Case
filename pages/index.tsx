@@ -1,7 +1,8 @@
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import TextFilter from '../components/CountryList'
+import CountryList from '../components/CountryList'
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
+import TextField from '@/components/TextField';
 
 const client = new ApolloClient({
   uri: "https://countries.trevorblades.com",
@@ -14,8 +15,8 @@ export default function Home() {
   return (
     <>
       <ApolloProvider client={client}>
-
-        <TextFilter />
+        <TextField />
+        <CountryList />
       </ApolloProvider>
 
     </>

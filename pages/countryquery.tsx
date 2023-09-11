@@ -6,6 +6,10 @@ const LIST_COUNTRIES = gql`
       name
       code
       capital
+      languages {
+        code
+        name
+      }
     }
   }
 `;
