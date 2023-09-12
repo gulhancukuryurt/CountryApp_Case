@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 function Footer() {
     return (
@@ -7,34 +8,59 @@ function Footer() {
             <div className="container p-6">
                 <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-6">
                     <div className="mb-6 lg:mb-0">
-                        <img
+                        <Image
                             src="https://tecdn.b-cdn.net/img/new/fluid/city/113.webp"
-                            className="w-full rounded-md shadow-lg" />
+                            className="w-full rounded-md shadow-lg" 
+                            alt='Footer Photo'
+                            width={200}
+                            height={200}
+
+                            />
                     </div>
                     <div className="mb-6 lg:mb-0">
-                        <img
+                        <Image
                             src="https://tecdn.b-cdn.net/img/new/fluid/city/111.webp"
-                            className="w-full rounded-md shadow-lg" />
+                            className="w-full rounded-md shadow-lg" 
+                            alt='Footer Photo'
+                            width={200}
+                            height={200}
+                            />
                     </div>
                     <div className="mb-6 lg:mb-0">
-                        <img
+                        <Image
                             src="https://tecdn.b-cdn.net/img/new/fluid/city/112.webp"
-                            className="w-full rounded-md shadow-lg" />
+                            className="w-full rounded-md shadow-lg"
+                            alt='Footer Photo'
+                            width={200}
+                            height={200}
+                            />
                     </div>
                     <div className="mb-6 lg:mb-0">
-                        <img
+                        <Image
                             src="https://tecdn.b-cdn.net/img/new/fluid/city/114.webp"
-                            className="w-full rounded-md shadow-lg" />
+                            className="w-full rounded-md shadow-lg" 
+                            alt='Footer Photo'
+                            width={200}
+                            height={200}
+                            />
                     </div>
                     <div className="mb-6 lg:mb-0">
-                        <img
+                        <Image
                             src="https://tecdn.b-cdn.net/img/new/fluid/city/115.webp"
-                            className="w-full rounded-md shadow-lg" />
+                            className="w-full rounded-md shadow-lg" 
+                            alt='Footer Photo'
+                            width={200}
+                            height={200}
+                            />
                     </div>
                     <div className="mb-6 lg:mb-0">
-                        <img
+                        <Image
                             src="https://tecdn.b-cdn.net/img/new/fluid/city/116.webp"
-                            className="w-full rounded-md shadow-lg" />
+                            className="w-full rounded-md shadow-lg" 
+                            alt='Footer Photo'
+                            width={200}
+                            height={200}
+                            />
                     </div>
                 </div>
             </div>
