@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { useQuery } from "@apollo/client";
 import LIST_COUNTRIES from "../pages/countryquery";
 import { FaAngleDoubleRight, FaAngleDoubleLeft } from "react-icons/fa";
@@ -23,20 +23,19 @@ const CountryList: React.FC = () => {
       setSelectedValue(Number(event.target.value));
     };
   
-  const filterCountries = (query: string) => {
-    if (!data || !data.countries) {
-      return [];
-    }
-    return data.countries.filter((country: Country) =>
-      country.name.toLowerCase().includes(query.toLowerCase())
-    );
-  };
-
-  useEffect(() => {
-    const filtered = filterCountries(searchQuery);
-    setFilteredCountries(filtered);
-  }, [searchQuery, data]);
-
+    const filterCountries = useCallback((query: string) => {
+      if (!data || !data.countries) {
+        return [];
+      }
+      return data.countries.filter((country: Country) =>
+        country.name.toLowerCase().includes(query.toLowerCase())
+      );
+    }, [data]);
+    
+    useEffect(() => {
+      const filtered = filterCountries(searchQuery);
+      setFilteredCountries(filtered);
+    }, [searchQuery, data, filterCountries]);
   
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
